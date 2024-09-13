@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                // "/home/code/mlir-tutorial/open-earth-compiler/include",
+                "/home/code/mlir-tutorial/mlir-vtc/include",
+                "/home/code/mlir-tutorial/install/include"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang++",
+            "cStandard": "c17",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "linux-clang-x64",
+           // "compileCommands":"/home/code/mlir-tutorial/open-earth-compiler/build/compile_commands.json"
+        }
+    ],
+    "version": 4
+}

@@ -69,18 +69,20 @@
         "list": "cpp",
         "unordered_set": "cpp"
     },
-    "mlir.server_path": "/home/thirdparty/llvm-project/build/bin/mlir-lsp-server",
-    "mlir.tablegen_server_path": "/home/thirdparty/llvm-project/build/bin/tblgen-lsp-server",
+    "mlir.server_path": "/home/code/llvmorg-18/bin/mlir-lsp-server",
+    "mlir.tablegen_server_path": "/home/code/llvmorg-18/bin/tblgen-lsp-server",
     "mlir.tablegen_compilation_databases": [
         // "/home/code/mlir-tutorial/mlir-toy/tablegen_compile_commands.yml",
         //  "/home/code/mlir-tutorial/relay-mlir/build/tablegen_compile_commands.yml",
         //  "/home/code/mlir-tutorial/hcl-dialect/build/tablegen_compile_commands.yml",
         //  "/home/code/mlir-tutorial/tt-mlir/build/tablegen_compile_commands.yml",
-         "/home/code/mlir-tutorial/mlir-tcp/.vscode/tablegen_compile_commands.yml"
+         ".vscode/tablegen_compile_commands.yml"
     ],
-    "mlir.pdll_server_path": "/home/thirdparty/llvm-project/build/bin/mlir-pdll-lsp-server",
+    "mlir.pdll_server_path": "/home/code/llvmorg-18/bin/mlir-pdll-lsp-server",
 
     "mlir.onSettingsChanged": "prompt",
     "bazel.executable": "/usr/bin/bazel",
+    "cmake.options.statusBarVisibility": "visible",
+    "C_Cpp.errorSquiggles": "disabled",
   
 }

@@ -1,9 +1,6 @@
 --- !FileInfo:
-  filepath: "/home/code/mlir-tutorial/mlir-tcp/include/mlir-tcp/Dialect/IR/TcpBase.td"
-  includes: "/home/code/mlir-tutorial/mlir-tcp/bazel-mlir-tcp/external/llvm-project/mlir/include;/home/code/mlir-tutorial/mlir-tcp/include"
+  filepath: "/home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc/VtcBase.td"
+  includes: "/home/code/llvmorg-cc4244/include;/home/code/llvmorg-cc4244/include;"
 --- !FileInfo:
-  filepath: "/home/code/mlir-tutorial/mlir-tcp/include/mlir-tcp/Dialect/IR/TcpOps.td"
-  includes: "/home/code/mlir-tutorial/mlir-tcp/bazel-mlir-tcp/external/llvm-project/mlir/include;/home/code/mlir-tutorial/mlir-tcp/include"
---- !FileInfo:
-  filepath: "/home/code/mlir-tutorial/mlir-tcp/include/mlir-tcp/Dialect/IR/TcpTypes.td"
-  includes: "/home/code/mlir-tutorial/mlir-tcp/bazel-mlir-tcp/external/llvm-project/mlir/include;/home/code/mlir-tutorial/mlir-tcp/include"
+  filepath: "/home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc/VtcOps.td"
+  includes: "/home/code/llvmorg-cc4244/include;/home/code/llvmorg-cc4244/include;/home/code/mlir-tutorial/mlir-vtc/include;/home/code/mlir-tutorial/mlir-vtc/include/Dialect"
