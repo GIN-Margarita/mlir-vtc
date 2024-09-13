@@ -75,3 +75,41 @@ Type VtcDialect::parseType(DialectAsmParser &parser) const {
       << parser.getFullSymbolSpec();
   return Type();
 }
+
+
+//===----------------------------------------------------------------------===//
+// Type Printing
+//===----------------------------------------------------------------------===//
+
+namespace {
+
+void printGridOrTempType(StringRef name, Type type, DialectAsmPrinter &printer) {
+  printer << name;
+  printer << "<";
+  for (auto size : type.cast<GridType>().getShape()) {
+    if (size == GridType::kDynamicDimension)
+      printer << "?";
+    else
+      printer << size;
+    printer << "x";
+  }
+  printer << type.cast<GridType>().getElementType() << ">";
+}
+
+void printResultType(StringRef name, Type type, DialectAsmPrinter &printer) {
+  printer << name;
+  printer << "<" << type.cast<ResultType>().getResultType() << ">";
+}
+
+} // namespace
+
+void VtcDialect::printType(Type type, DialectAsmPrinter &printer) const {
+  TypeSwitch<Type>(type)
+      .Case<FieldType>(
+          [&](Type) { printGridOrTempType(getFieldTypeName(), type, printer); })
+      .Case<TempType>(
+          [&](Type) { printGridOrTempType(getTempTypeName(), type, printer); })
+      .Case<ResultType>(
+          [&](Type) { printResultType(getResultTypeName(), type, printer); })
+      .Default([](Type) { llvm_unreachable("unexpected 'shape' type kind"); });
+}

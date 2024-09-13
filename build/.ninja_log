@@ -48,3 +48,6 @@
 105	3940	1726215947281730328	lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcTypes.cpp.o	175db11f672dd9e0
 105	3942	1726215947281730328	lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcOps.cpp.o	9a15877d812d233e
 3942	6468	1726215949811808040	lib/libVtc.a	25592dbe41fe0850
+114	2332	1726216276022134388	lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcTypes.cpp.o	175db11f672dd9e0
+1	789	1726216308280740813	lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcDialect.cpp.o	86bd831266ed321f
+789	3038	1726216310530777628	lib/libVtc.a	25592dbe41fe0850
