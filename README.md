@@ -1,6 +1,6 @@
 # The Open Earth Compiler
 
-Development repository for the Open Earth Compiler. The compiler implements a stencil dialect and transformations that lower stencil programs to efficient GPU code. 
+Development repository for the Open Earth Compiler. The compiler implements a Vtc dialect and transformations that lower Vtc programs to efficient GPU code. 
 
 ## Publication
 
@@ -34,16 +34,16 @@ cmake -G Ninja ../llvm -DLLVM_BUILD_EXAMPLES=OFF -DLLVM_TARGETS_TO_BUILD="host;N
 ```
 **Note**: Apply all patches found in the patch folder using git apply:
 ```
-git apply ../stencil-dialect/patches/runtime.patch
+git apply ../Vtc-dialect/patches/runtime.patch
 ```
 
-## Compiling an Example Stencil Program
+## Compiling an Example Vtc Program
 
-The following command lowers the laplace example stencil to NVIDIA GPU code:
+The following command lowers the laplace example Vtc to NVIDIA GPU code:
 ```
-./bin/oec-opt --stencil-shape-inference --convert-stencil-to-std --cse --parallel-loop-tiling='parallel-loop-tile-sizes=128,1,1' --canonicalize --test-gpu-greedy-parallel-loop-mapping --convert-parallel-loops-to-gpu --canonicalize --lower-affine --convert-scf-to-std --stencil-kernel-to-cubin ../test/Examples/laplace.mlir > ../test/Examples/GPU_laplace_lowered.mlir
+./bin/oec-opt --Vtc-shape-inference --convert-Vtc-to-std --cse --parallel-loop-tiling='parallel-loop-tile-sizes=128,1,1' --canonicalize --test-gpu-greedy-parallel-loop-mapping --convert-parallel-loops-to-gpu --canonicalize --lower-affine --convert-scf-to-std --Vtc-kernel-to-cubin ../test/Examples/laplace.mlir > ../test/Examples/GPU_laplace_lowered.mlir
 ```
-**NOTE**: Use the command line flag --stencil-kernel-to-hsaco for AMD GPUs.
+**NOTE**: Use the command line flag --Vtc-kernel-to-hsaco for AMD GPUs.
 
 The tools mlir-translate and llc then convert the lowered code to an assembly file and/or object file:
 ```
