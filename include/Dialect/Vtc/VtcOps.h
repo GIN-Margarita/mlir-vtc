@@ -1,8 +1,9 @@
 #ifndef DIALECT_Vtc_VtcOPS_H
 #define DIALECT_Vtc_VtcOPS_H
 
-// #include "Dialect/Vtc/VtcTypes.h"
-// #include "Dialect/Vtc/VtcUtils.h"
+#include "Dialect/Vtc/VtcTypes.h"
+#include "Dialect/Vtc/VtcUtils.h"
+#include "Dialect/Vtc/VtcDialect.h"
 #include "mlir/IR/Attributes.h"
 #include "mlir/IR/BuiltinOps.h"
 #include "mlir/IR/MLIRContext.h"

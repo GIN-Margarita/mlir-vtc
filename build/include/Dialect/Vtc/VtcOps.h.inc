@@ -59,12 +59,15 @@ public:
   ::mlir::ArrayAttr ub();
   void lbAttr(::mlir::ArrayAttr attr);
   void ubAttr(::mlir::ArrayAttr attr);
+  static void build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, Value field, ArrayRef<int64_t> lb, ArrayRef<int64_t> ub);
   static void build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, ::mlir::Type res, ::mlir::Value field, ::mlir::ArrayAttr lb, ::mlir::ArrayAttr ub);
   static void build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, ::mlir::TypeRange resultTypes, ::mlir::Value field, ::mlir::ArrayAttr lb, ::mlir::ArrayAttr ub);
   static void build(::mlir::OpBuilder &, ::mlir::OperationState &odsState, ::mlir::TypeRange resultTypes, ::mlir::ValueRange operands, ::llvm::ArrayRef<::mlir::NamedAttribute> attributes = {});
+  ::mlir::LogicalResult verify();
+  static void getCanonicalizationPatterns(::mlir::OwningRewritePatternList &results, ::mlir::MLIRContext *context);
+  void updateArgumentTypes();
   static ::mlir::ParseResult parse(::mlir::OpAsmParser &parser, ::mlir::OperationState &result);
   void print(::mlir::OpAsmPrinter &p);
-  ::mlir::LogicalResult verify();
 
     static StringRef getLBAttrName() { return "lb"; }
     static StringRef getUBAttrName() { return "ub"; }

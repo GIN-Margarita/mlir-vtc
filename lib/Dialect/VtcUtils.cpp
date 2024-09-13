@@ -1,4 +1,4 @@
-#include "Dialect/Vcc/VtcUtils.h"
+#include "Dialect/Vtc/VtcUtils.h"
 #include "mlir/Support/LLVM.h"
 #include <cstdint>
 #include <functional>

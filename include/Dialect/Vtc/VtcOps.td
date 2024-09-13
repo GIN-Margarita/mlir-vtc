@@ -40,7 +40,7 @@ def Vtc_CastOp : Vtc_Op<"cast", [
   let verifier = [{
     auto fieldType = field().getType().cast<Vtc::GridType>();
     auto resType = res().getType().cast<Vtc::GridType>();
-    auto shapeOp = cast<ShapeOp>(this->getOperation());
+    auto shapeOp = cast<ShapeInterface>(this->getOperation());
     if(!fieldType.hasDynamicShape())
       return emitOpError("expected field to have dynamic shape");
     if(resType.hasDynamicShape())
@@ -58,7 +58,7 @@ def Vtc_CastOp : Vtc_Op<"cast", [
 
     // Verify all users fit the shape
     for(auto user : res().getUsers()) {
-      if(auto userOp = dyn_cast<ShapeOp>(user)) {
+      if(auto userOp = dyn_cast<ShapeInterface>(user)) {
         if(userOp.hasShape() &&
            (shapeOp.getLB() != applyFunElementWise(shapeOp.getLB(), userOp.getLB(), min) ||
             shapeOp.getUB() != applyFunElementWise(shapeOp.getUB(), userOp.getUB(), max))) 

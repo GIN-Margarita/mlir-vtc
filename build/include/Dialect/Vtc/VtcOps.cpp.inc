@@ -149,6 +149,16 @@ void CastOp::ubAttr(::mlir::ArrayAttr attr) {
   (*this)->setAttr("ub", attr);
 }
 
+void CastOp::build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, Value field, ArrayRef<int64_t> lb, ArrayRef<int64_t> ub) {
+      odsState.addOperands(field);
+      odsState.addAttribute(getLBAttrName(), odsBuilder.getI64ArrayAttr(lb));
+      odsState.addAttribute(getUBAttrName(), odsBuilder.getI64ArrayAttr(ub));
+      odsState.addTypes(Vtc::FieldType::get(
+        field.getType().cast<Vtc::GridType>().getElementType(), 
+        applyFunElementWise(lb, ub, std::minus<int64_t>())));
+    
+}
+
 void CastOp::build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, ::mlir::Type res, ::mlir::Value field, ::mlir::ArrayAttr lb, ::mlir::ArrayAttr ub) {
   odsState.addOperands(field);
   odsState.addAttribute("lb", lb);
@@ -172,14 +182,6 @@ void CastOp::build(::mlir::OpBuilder &, ::mlir::OperationState &odsState, ::mlir
   odsState.addTypes(resultTypes);
 }
 
-::mlir::ParseResult CastOp::parse(::mlir::OpAsmParser &parser, ::mlir::OperationState &result) {
-  return ::parseCastOp(parser, result);
-}
-
-void CastOp::print(::mlir::OpAsmPrinter &p) {
-  ::print(*this, p);
-}
-
 ::mlir::LogicalResult CastOp::verify() {
   if (failed(CastOpAdaptor(*this).verify((*this)->getLoc()))) return ::mlir::failure();
   {
@@ -200,7 +202,95 @@ void CastOp::print(::mlir::OpAsmPrinter &p) {
       ++index;
     }
   }
-  return ::verify(*this);
+  auto fieldType = field().getType().cast<Vtc::GridType>();
+    auto resType = res().getType().cast<Vtc::GridType>();
+    auto shapeOp = cast<ShapeInterface>(this->getOperation());
+    if(!fieldType.hasDynamicShape())
+      return emitOpError("expected field to have dynamic shape");
+    if(resType.hasDynamicShape())
+      return emitOpError("expected result to have static shape");
+    if(fieldType.getAllocation() != resType.getAllocation())
+      return emitOpError("expected the field and result types to have the same allocation");
+    if (fieldType.getElementType() != resType.getElementType())
+      return emitOpError("the field and result types have different element types");
+    if(shapeOp.getRank() != fieldType.getRank() || shapeOp.getRank() != resType.getRank())
+      return emitOpError("expected op and the field and result types to have the same rank");
+    
+    // Ensure the shape matches the result type
+    if (!resType.hasEqualShape(shapeOp.getLB(), shapeOp.getUB()))
+      return emitOpError("expected op and result type to have the same shape");
+
+    // Verify all users fit the shape
+    for(auto user : res().getUsers()) {
+      if(auto userOp = dyn_cast<ShapeInterface>(user)) {
+        if(userOp.hasShape() &&
+           (shapeOp.getLB() != applyFunElementWise(shapeOp.getLB(), userOp.getLB(), min) ||
+            shapeOp.getUB() != applyFunElementWise(shapeOp.getUB(), userOp.getUB(), max))) 
+          return emitOpError("shape not large enough to fit all accesses");
+      }
+    }
+
+    return success();
+}
+
+
+
+
+
+::mlir::ParseResult CastOp::parse(::mlir::OpAsmParser &parser, ::mlir::OperationState &result) {
+  ::mlir::OpAsmParser::OperandType fieldRawOperands[1];
+  ::llvm::ArrayRef<::mlir::OpAsmParser::OperandType> fieldOperands(fieldRawOperands);  ::llvm::SMLoc fieldOperandsLoc;
+  (void)fieldOperandsLoc;
+  ::mlir::ArrayAttr lbAttr;
+  ::mlir::ArrayAttr ubAttr;
+  ::llvm::ArrayRef<::mlir::Type> fieldTypes;
+  ::llvm::ArrayRef<::mlir::Type> resTypes;
+
+  fieldOperandsLoc = parser.getCurrentLocation();
+  if (parser.parseOperand(fieldRawOperands[0]))
+    return ::mlir::failure();
+  if (parser.parseLParen())
+    return ::mlir::failure();
+
+  if (parser.parseAttribute(lbAttr, parser.getBuilder().getType<::mlir::NoneType>(), "lb", result.attributes))
+    return ::mlir::failure();
+  if (parser.parseColon())
+    return ::mlir::failure();
+
+  if (parser.parseAttribute(ubAttr, parser.getBuilder().getType<::mlir::NoneType>(), "ub", result.attributes))
+    return ::mlir::failure();
+  if (parser.parseRParen())
+    return ::mlir::failure();
+  if (parser.parseOptionalAttrDictWithKeyword(result.attributes))
+    return ::mlir::failure();
+  if (parser.parseColon())
+    return ::mlir::failure();
+
+  ::mlir::FunctionType field__res_functionType;
+  if (parser.parseType(field__res_functionType))
+    return ::mlir::failure();
+  fieldTypes = field__res_functionType.getInputs();
+  resTypes = field__res_functionType.getResults();
+  result.addTypes(resTypes);
+  if (parser.resolveOperands(fieldOperands, fieldTypes, fieldOperandsLoc, result.operands))
+    return ::mlir::failure();
+  return ::mlir::success();
+}
+
+void CastOp::print(::mlir::OpAsmPrinter &p) {
+  p << "Vtc.cast";
+  p << ' ';
+  p << field();
+  p << "(";
+  p.printAttributeWithoutType(lbAttr());
+  p << ' ' << ":";
+  p << ' ';
+  p.printAttributeWithoutType(ubAttr());
+  p << ")";
+  p.printOptionalAttrDictWithKeyword(getAttrs(), /*elidedAttrs=*/{"lb", "ub"});
+  p << ' ' << ":";
+  p << ' ';
+  p.printFunctionalType(::llvm::ArrayRef<::mlir::Type>(field().getType()), ::llvm::ArrayRef<::mlir::Type>(res().getType()));
 }
 
 } // namespace Vtc

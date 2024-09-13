@@ -1,6 +1,6 @@
 #include "Dialect/Vtc/VtcOps.h"
 #include "Dialect/Vtc/VtcDialect.h"
-
+#include "Dialect/Vtc/ShapeInterface.h"
 #include "mlir/Dialect/SCF/SCF.h"
 #include "mlir/IR/Attributes.h"
 #include "mlir/IR/Block.h"
@@ -27,14 +27,10 @@
 using namespace mlir;
 using namespace Vtc; 
 
-Index  Vtc::CastOp::getLB()
-{
-
-}
 
 namespace mlir {
     namespace Vtc{
-        #include "Dialect/Vtc/ShapeInterface.cpp.inc"
+#include "Dialect/Vtc/ShapeInterface.cpp.inc"
     }
 }
 #define GET_OP_CLASSES 

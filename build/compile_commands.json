@@ -1,6 +1,16 @@
 [
 {
   "directory": "/home/code/mlir-tutorial/mlir-vtc/build",
+  "command": "/usr/bin/c++ -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include  -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG -o lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcUtils.cpp.o -c /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/VtcUtils.cpp",
+  "file": "/home/code/mlir-tutorial/mlir-vtc/lib/Dialect/VtcUtils.cpp"
+},
+{
+  "directory": "/home/code/mlir-tutorial/mlir-vtc/build",
+  "command": "/usr/bin/c++ -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include  -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG -o lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcTypes.cpp.o -c /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/VtcTypes.cpp",
+  "file": "/home/code/mlir-tutorial/mlir-vtc/lib/Dialect/VtcTypes.cpp"
+},
+{
+  "directory": "/home/code/mlir-tutorial/mlir-vtc/build",
   "command": "/usr/bin/c++ -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include  -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG -o lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcDialect.cpp.o -c /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/VtcDialect.cpp",
   "file": "/home/code/mlir-tutorial/mlir-vtc/lib/Dialect/VtcDialect.cpp"
 },
@@ -13,5 +23,20 @@
   "directory": "/home/code/mlir-tutorial/mlir-vtc/build",
   "command": "/usr/bin/c++ -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include  -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG -o lib/Dialect/CMakeFiles/obj.Vtc.dir/ShapeInterface.cpp.o -c /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/ShapeInterface.cpp",
   "file": "/home/code/mlir-tutorial/mlir-vtc/lib/Dialect/ShapeInterface.cpp"
+},
+{
+  "directory": "/home/code/mlir-tutorial/mlir-vtc/build",
+  "command": "/usr/bin/c++ -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include  -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG -o lib/Dialect/CMakeFiles/obj.Vtc.dir/OffsetInterface.cpp.o -c /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/OffsetInterface.cpp",
+  "file": "/home/code/mlir-tutorial/mlir-vtc/lib/Dialect/OffsetInterface.cpp"
+},
+{
+  "directory": "/home/code/mlir-tutorial/mlir-vtc/build",
+  "command": "/usr/bin/c++ -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include  -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG -o lib/Dialect/CMakeFiles/obj.Vtc.dir/ShiftInterface.cpp.o -c /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/ShiftInterface.cpp",
+  "file": "/home/code/mlir-tutorial/mlir-vtc/lib/Dialect/ShiftInterface.cpp"
+},
+{
+  "directory": "/home/code/mlir-tutorial/mlir-vtc/build",
+  "command": "/usr/bin/c++ -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include  -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG -o lib/Dialect/CMakeFiles/obj.Vtc.dir/ExtentInterface.cpp.o -c /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/ExtentInterface.cpp",
+  "file": "/home/code/mlir-tutorial/mlir-vtc/lib/Dialect/ExtentInterface.cpp"
 }
 ]

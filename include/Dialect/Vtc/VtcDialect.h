@@ -32,15 +32,15 @@ public:
   static StringRef getTempTypeName() { return "temp"; }
   static StringRef getResultTypeName() { return "result"; }
 
-//   static bool isVtcProgram(FuncOp funcOp) {
-//     return !!funcOp->getAttr(getVtcProgramAttrName());
-//   }
+  static bool isVtcProgram(FuncOp funcOp) {
+    return !!funcOp->getAttr(getVtcProgramAttrName());
+  }
 
-//   /// Parses a type registered to this dialect
-//   Type parseType(DialectAsmParser &parser) const override;
+  /// Parses a type registered to this dialect
+  Type parseType(DialectAsmParser &parser) const override;
 
-//   /// Print a type registered to this dialect
-//   void printType(Type type, DialectAsmPrinter &os) const override;
+  /// Print a type registered to this dialect
+  void printType(Type type, DialectAsmPrinter &os) const override;
 };
 
 } // namespace Vtc

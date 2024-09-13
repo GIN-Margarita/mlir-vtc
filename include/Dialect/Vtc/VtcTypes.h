@@ -52,7 +52,7 @@ public:
         return kDynamicDimension == dimSize;
     }
 
-    static constexpr bool isScalar(in64_t dimSize)
+    static constexpr bool isScalar(int64_t dimSize)
     {
         return kScalarDimension == dimSize; 
     }

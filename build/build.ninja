@@ -63,7 +63,7 @@ build mlir-tablegen-targets: phony
 #############################################
 # Utility command for mlir-headers
 
-build mlir-headers: phony include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRVtcOpsIncGen
+build mlir-headers: phony include/Dialect/Vtc/MLIRExtentInterfaceIncGen include/Dialect/Vtc/MLIROffsetInterfaceIncGen include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRShiftInterfaceIncGen include/Dialect/Vtc/MLIRVtcOpsIncGen
 
 
 #############################################
@@ -304,6 +304,24 @@ build include/Dialect/Vtc/MLIRShapeInterfaceIncGen: phony include/Dialect/Vtc/CM
 
 
 #############################################
+# Utility command for MLIROffsetInterfaceIncGen
+
+build include/Dialect/Vtc/MLIROffsetInterfaceIncGen: phony include/Dialect/Vtc/CMakeFiles/MLIROffsetInterfaceIncGen include/Dialect/Vtc/OffsetInterface.cpp.inc include/Dialect/Vtc/OffsetInterface.h.inc include/Dialect/Vtc/ShapeInterface.cpp.inc include/Dialect/Vtc/ShapeInterface.h.inc include/Dialect/Vtc/MLIRShapeInterfaceIncGen
+
+
+#############################################
+# Utility command for MLIRShiftInterfaceIncGen
+
+build include/Dialect/Vtc/MLIRShiftInterfaceIncGen: phony include/Dialect/Vtc/CMakeFiles/MLIRShiftInterfaceIncGen include/Dialect/Vtc/OffsetInterface.cpp.inc include/Dialect/Vtc/OffsetInterface.h.inc include/Dialect/Vtc/ShapeInterface.cpp.inc include/Dialect/Vtc/ShapeInterface.h.inc include/Dialect/Vtc/ShiftInterface.cpp.inc include/Dialect/Vtc/ShiftInterface.h.inc include/Dialect/Vtc/MLIROffsetInterfaceIncGen include/Dialect/Vtc/MLIRShapeInterfaceIncGen
+
+
+#############################################
+# Utility command for MLIRExtentInterfaceIncGen
+
+build include/Dialect/Vtc/MLIRExtentInterfaceIncGen: phony include/Dialect/Vtc/CMakeFiles/MLIRExtentInterfaceIncGen include/Dialect/Vtc/ExtentInterface.cpp.inc include/Dialect/Vtc/ExtentInterface.h.inc include/Dialect/Vtc/OffsetInterface.cpp.inc include/Dialect/Vtc/OffsetInterface.h.inc include/Dialect/Vtc/ShapeInterface.cpp.inc include/Dialect/Vtc/ShapeInterface.h.inc include/Dialect/Vtc/ShiftInterface.cpp.inc include/Dialect/Vtc/ShiftInterface.h.inc include/Dialect/Vtc/MLIROffsetInterfaceIncGen include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRShiftInterfaceIncGen
+
+
+#############################################
 # Utility command for VtcDialectDocGen
 
 build include/Dialect/Vtc/VtcDialectDocGen: phony include/Dialect/Vtc/CMakeFiles/VtcDialectDocGen docs/Vtc/VtcDialect.md include/Dialect/Vtc/VtcDialect.md
@@ -470,6 +488,84 @@ build include/Dialect/Vtc/ShapeInterface.h.inc | ${cmake_ninja_workdir}include/D
 
 
 #############################################
+# Phony custom command for include/Dialect/Vtc/CMakeFiles/MLIROffsetInterfaceIncGen
+
+build include/Dialect/Vtc/CMakeFiles/MLIROffsetInterfaceIncGen | ${cmake_ninja_workdir}include/Dialect/Vtc/CMakeFiles/MLIROffsetInterfaceIncGen: phony include/Dialect/Vtc/ShapeInterface.h.inc include/Dialect/Vtc/ShapeInterface.h.inc include/Dialect/Vtc/ShapeInterface.cpp.inc include/Dialect/Vtc/ShapeInterface.cpp.inc include/Dialect/Vtc/OffsetInterface.h.inc include/Dialect/Vtc/OffsetInterface.h.inc include/Dialect/Vtc/OffsetInterface.cpp.inc include/Dialect/Vtc/OffsetInterface.cpp.inc || include/Dialect/Vtc/MLIRShapeInterfaceIncGen
+
+
+#############################################
+# Custom command for include/Dialect/Vtc/OffsetInterface.cpp.inc
+
+build include/Dialect/Vtc/OffsetInterface.cpp.inc | ${cmake_ninja_workdir}include/Dialect/Vtc/OffsetInterface.cpp.inc: CUSTOM_COMMAND /home/code/mlir-tutorial/install/bin/mlir-tblgen ../include/Dialect/Vtc/OffsetInterface.td || include/Dialect/Vtc/MLIRShapeInterfaceIncGen
+  COMMAND = cd /home/code/mlir-tutorial/mlir-vtc/build && /home/code/mlir-tutorial/install/bin/mlir-tblgen -gen-op-interface-defs -I /home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc /home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc/OffsetInterface.td --write-if-changed -o include/Dialect/Vtc/OffsetInterface.cpp.inc -d include/Dialect/Vtc/OffsetInterface.cpp.inc.d
+  DESC = Building OffsetInterface.cpp.inc...
+  depfile = /home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/OffsetInterface.cpp.inc.d
+  restat = 1
+
+
+#############################################
+# Custom command for include/Dialect/Vtc/OffsetInterface.h.inc
+
+build include/Dialect/Vtc/OffsetInterface.h.inc | ${cmake_ninja_workdir}include/Dialect/Vtc/OffsetInterface.h.inc: CUSTOM_COMMAND /home/code/mlir-tutorial/install/bin/mlir-tblgen ../include/Dialect/Vtc/OffsetInterface.td || include/Dialect/Vtc/MLIRShapeInterfaceIncGen
+  COMMAND = cd /home/code/mlir-tutorial/mlir-vtc/build && /home/code/mlir-tutorial/install/bin/mlir-tblgen -gen-op-interface-decls -I /home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc /home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc/OffsetInterface.td --write-if-changed -o include/Dialect/Vtc/OffsetInterface.h.inc -d include/Dialect/Vtc/OffsetInterface.h.inc.d
+  DESC = Building OffsetInterface.h.inc...
+  depfile = /home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/OffsetInterface.h.inc.d
+  restat = 1
+
+
+#############################################
+# Phony custom command for include/Dialect/Vtc/CMakeFiles/MLIRShiftInterfaceIncGen
+
+build include/Dialect/Vtc/CMakeFiles/MLIRShiftInterfaceIncGen | ${cmake_ninja_workdir}include/Dialect/Vtc/CMakeFiles/MLIRShiftInterfaceIncGen: phony include/Dialect/Vtc/ShapeInterface.h.inc include/Dialect/Vtc/ShapeInterface.h.inc include/Dialect/Vtc/ShapeInterface.cpp.inc include/Dialect/Vtc/ShapeInterface.cpp.inc include/Dialect/Vtc/OffsetInterface.h.inc include/Dialect/Vtc/OffsetInterface.h.inc include/Dialect/Vtc/OffsetInterface.cpp.inc include/Dialect/Vtc/OffsetInterface.cpp.inc include/Dialect/Vtc/ShiftInterface.h.inc include/Dialect/Vtc/ShiftInterface.h.inc include/Dialect/Vtc/ShiftInterface.cpp.inc include/Dialect/Vtc/ShiftInterface.cpp.inc || include/Dialect/Vtc/MLIROffsetInterfaceIncGen include/Dialect/Vtc/MLIRShapeInterfaceIncGen
+
+
+#############################################
+# Custom command for include/Dialect/Vtc/ShiftInterface.cpp.inc
+
+build include/Dialect/Vtc/ShiftInterface.cpp.inc | ${cmake_ninja_workdir}include/Dialect/Vtc/ShiftInterface.cpp.inc: CUSTOM_COMMAND /home/code/mlir-tutorial/install/bin/mlir-tblgen ../include/Dialect/Vtc/ShiftInterface.td || include/Dialect/Vtc/MLIROffsetInterfaceIncGen include/Dialect/Vtc/MLIRShapeInterfaceIncGen
+  COMMAND = cd /home/code/mlir-tutorial/mlir-vtc/build && /home/code/mlir-tutorial/install/bin/mlir-tblgen -gen-op-interface-defs -I /home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc /home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc/ShiftInterface.td --write-if-changed -o include/Dialect/Vtc/ShiftInterface.cpp.inc -d include/Dialect/Vtc/ShiftInterface.cpp.inc.d
+  DESC = Building ShiftInterface.cpp.inc...
+  depfile = /home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/ShiftInterface.cpp.inc.d
+  restat = 1
+
+
+#############################################
+# Custom command for include/Dialect/Vtc/ShiftInterface.h.inc
+
+build include/Dialect/Vtc/ShiftInterface.h.inc | ${cmake_ninja_workdir}include/Dialect/Vtc/ShiftInterface.h.inc: CUSTOM_COMMAND /home/code/mlir-tutorial/install/bin/mlir-tblgen ../include/Dialect/Vtc/ShiftInterface.td || include/Dialect/Vtc/MLIROffsetInterfaceIncGen include/Dialect/Vtc/MLIRShapeInterfaceIncGen
+  COMMAND = cd /home/code/mlir-tutorial/mlir-vtc/build && /home/code/mlir-tutorial/install/bin/mlir-tblgen -gen-op-interface-decls -I /home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc /home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc/ShiftInterface.td --write-if-changed -o include/Dialect/Vtc/ShiftInterface.h.inc -d include/Dialect/Vtc/ShiftInterface.h.inc.d
+  DESC = Building ShiftInterface.h.inc...
+  depfile = /home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/ShiftInterface.h.inc.d
+  restat = 1
+
+
+#############################################
+# Phony custom command for include/Dialect/Vtc/CMakeFiles/MLIRExtentInterfaceIncGen
+
+build include/Dialect/Vtc/CMakeFiles/MLIRExtentInterfaceIncGen | ${cmake_ninja_workdir}include/Dialect/Vtc/CMakeFiles/MLIRExtentInterfaceIncGen: phony include/Dialect/Vtc/ShapeInterface.h.inc include/Dialect/Vtc/ShapeInterface.h.inc include/Dialect/Vtc/ShapeInterface.cpp.inc include/Dialect/Vtc/ShapeInterface.cpp.inc include/Dialect/Vtc/OffsetInterface.h.inc include/Dialect/Vtc/OffsetInterface.h.inc include/Dialect/Vtc/OffsetInterface.cpp.inc include/Dialect/Vtc/OffsetInterface.cpp.inc include/Dialect/Vtc/ShiftInterface.h.inc include/Dialect/Vtc/ShiftInterface.h.inc include/Dialect/Vtc/ShiftInterface.cpp.inc include/Dialect/Vtc/ShiftInterface.cpp.inc include/Dialect/Vtc/ExtentInterface.h.inc include/Dialect/Vtc/ExtentInterface.h.inc include/Dialect/Vtc/ExtentInterface.cpp.inc include/Dialect/Vtc/ExtentInterface.cpp.inc || include/Dialect/Vtc/MLIROffsetInterfaceIncGen include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRShiftInterfaceIncGen
+
+
+#############################################
+# Custom command for include/Dialect/Vtc/ExtentInterface.cpp.inc
+
+build include/Dialect/Vtc/ExtentInterface.cpp.inc | ${cmake_ninja_workdir}include/Dialect/Vtc/ExtentInterface.cpp.inc: CUSTOM_COMMAND /home/code/mlir-tutorial/install/bin/mlir-tblgen ../include/Dialect/Vtc/ExtentInterface.td || include/Dialect/Vtc/MLIROffsetInterfaceIncGen include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRShiftInterfaceIncGen
+  COMMAND = cd /home/code/mlir-tutorial/mlir-vtc/build && /home/code/mlir-tutorial/install/bin/mlir-tblgen -gen-op-interface-defs -I /home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc /home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc/ExtentInterface.td --write-if-changed -o include/Dialect/Vtc/ExtentInterface.cpp.inc -d include/Dialect/Vtc/ExtentInterface.cpp.inc.d
+  DESC = Building ExtentInterface.cpp.inc...
+  depfile = /home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/ExtentInterface.cpp.inc.d
+  restat = 1
+
+
+#############################################
+# Custom command for include/Dialect/Vtc/ExtentInterface.h.inc
+
+build include/Dialect/Vtc/ExtentInterface.h.inc | ${cmake_ninja_workdir}include/Dialect/Vtc/ExtentInterface.h.inc: CUSTOM_COMMAND /home/code/mlir-tutorial/install/bin/mlir-tblgen ../include/Dialect/Vtc/ExtentInterface.td || include/Dialect/Vtc/MLIROffsetInterfaceIncGen include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRShiftInterfaceIncGen
+  COMMAND = cd /home/code/mlir-tutorial/mlir-vtc/build && /home/code/mlir-tutorial/install/bin/mlir-tblgen -gen-op-interface-decls -I /home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc /home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc/ExtentInterface.td --write-if-changed -o include/Dialect/Vtc/ExtentInterface.h.inc -d include/Dialect/Vtc/ExtentInterface.h.inc.d
+  DESC = Building ExtentInterface.h.inc...
+  depfile = /home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/ExtentInterface.h.inc.d
+  restat = 1
+
+
+#############################################
 # Phony custom command for include/Dialect/Vtc/CMakeFiles/VtcDialectDocGen
 
 build include/Dialect/Vtc/CMakeFiles/VtcDialectDocGen | ${cmake_ninja_workdir}include/Dialect/Vtc/CMakeFiles/VtcDialectDocGen: phony docs/Vtc/VtcDialect.md
@@ -488,7 +584,7 @@ build docs/Vtc/VtcDialect.md | ${cmake_ninja_workdir}docs/Vtc/VtcDialect.md: CUS
 # Custom command for include/Dialect/Vtc/VtcDialect.md
 
 build include/Dialect/Vtc/VtcDialect.md | ${cmake_ninja_workdir}include/Dialect/Vtc/VtcDialect.md: CUSTOM_COMMAND /home/code/mlir-tutorial/install/bin/mlir-tblgen ../include/Dialect/Vtc/VtcDialect.td
-  COMMAND = cd /home/code/mlir-tutorial/mlir-vtc/build && /home/code/mlir-tutorial/install/bin/mlir-tblgen -gen-dialect-doc -I /home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc /home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc/VtcDialect.td --write-if-changed -o include/Dialect/Vtc/VtcDialect.md -d include/Dialect/Vtc/VtcDialect.md.d
+  COMMAND = cd /home/code/mlir-tutorial/mlir-vtc/build && /home/code/mlir-tutorial/install/bin/mlir-tblgen -gen-dialect-doc -I /home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc /home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc/VtcDialect.td --write-if-changed -o include/Dialect/Vtc/VtcDialect.md -d include/Dialect/Vtc/VtcDialect.md.d
   DESC = Building VtcDialect.md...
   depfile = /home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/VtcDialect.md.d
   restat = 1
@@ -513,7 +609,7 @@ build docs/Vtc/ShapeInterface.md | ${cmake_ninja_workdir}docs/Vtc/ShapeInterface
 # Custom command for include/Dialect/Vtc/ShapeInterface.md
 
 build include/Dialect/Vtc/ShapeInterface.md | ${cmake_ninja_workdir}include/Dialect/Vtc/ShapeInterface.md: CUSTOM_COMMAND /home/code/mlir-tutorial/install/bin/mlir-tblgen ../include/Dialect/Vtc/ShapeInterface.td
-  COMMAND = cd /home/code/mlir-tutorial/mlir-vtc/build && /home/code/mlir-tutorial/install/bin/mlir-tblgen -gen-op-interface-doc -I /home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc /home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc/ShapeInterface.td --write-if-changed -o include/Dialect/Vtc/ShapeInterface.md -d include/Dialect/Vtc/ShapeInterface.md.d
+  COMMAND = cd /home/code/mlir-tutorial/mlir-vtc/build && /home/code/mlir-tutorial/install/bin/mlir-tblgen -gen-op-interface-doc -I /home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc /home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc/ShapeInterface.td --write-if-changed -o include/Dialect/Vtc/ShapeInterface.md -d include/Dialect/Vtc/ShapeInterface.md.d
   DESC = Building ShapeInterface.md...
   depfile = /home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/ShapeInterface.md.d
   restat = 1
@@ -538,7 +634,7 @@ build docs/Vtc/VtcOps.md | ${cmake_ninja_workdir}docs/Vtc/VtcOps.md: CUSTOM_COMM
 # Custom command for include/Dialect/Vtc/VtcOps.md
 
 build include/Dialect/Vtc/VtcOps.md | ${cmake_ninja_workdir}include/Dialect/Vtc/VtcOps.md: CUSTOM_COMMAND /home/code/mlir-tutorial/install/bin/mlir-tblgen ../include/Dialect/Vtc/VtcOps.td
-  COMMAND = cd /home/code/mlir-tutorial/mlir-vtc/build && /home/code/mlir-tutorial/install/bin/mlir-tblgen -gen-op-doc -I /home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc /home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc/VtcOps.td --write-if-changed -o include/Dialect/Vtc/VtcOps.md -d include/Dialect/Vtc/VtcOps.md.d
+  COMMAND = cd /home/code/mlir-tutorial/mlir-vtc/build && /home/code/mlir-tutorial/install/bin/mlir-tblgen -gen-op-doc -I /home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc -I/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc /home/code/mlir-tutorial/mlir-vtc/include/Dialect/Vtc/VtcOps.td --write-if-changed -o include/Dialect/Vtc/VtcOps.md -d include/Dialect/Vtc/VtcOps.md.d
   DESC = Building VtcOps.md...
   depfile = /home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/VtcOps.md.d
   restat = 1
@@ -626,7 +722,23 @@ build lib/install/strip: phony lib/CMakeFiles/install/strip.util
 #############################################
 # Order-only phony target for obj.Vtc
 
-build cmake_object_order_depends_target_obj.Vtc: phony || include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRVtcOpsIncGen mlir-generic-headers mlir-headers
+build cmake_object_order_depends_target_obj.Vtc: phony || include/Dialect/Vtc/MLIRExtentInterfaceIncGen include/Dialect/Vtc/MLIROffsetInterfaceIncGen include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRShiftInterfaceIncGen include/Dialect/Vtc/MLIRVtcOpsIncGen mlir-generic-headers mlir-headers
+
+build lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcUtils.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/VtcUtils.cpp || cmake_object_order_depends_target_obj.Vtc
+  DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcUtils.cpp.o.d
+  FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG
+  INCLUDES = -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include
+  OBJECT_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
+  OBJECT_FILE_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
+
+build lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcTypes.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/VtcTypes.cpp || cmake_object_order_depends_target_obj.Vtc
+  DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcTypes.cpp.o.d
+  FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG
+  INCLUDES = -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include
+  OBJECT_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
+  OBJECT_FILE_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
 
 build lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcDialect.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/VtcDialect.cpp || cmake_object_order_depends_target_obj.Vtc
   DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
@@ -652,12 +764,36 @@ build lib/Dialect/CMakeFiles/obj.Vtc.dir/ShapeInterface.cpp.o: CXX_COMPILER__obj
   OBJECT_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
   OBJECT_FILE_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
 
+build lib/Dialect/CMakeFiles/obj.Vtc.dir/OffsetInterface.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/OffsetInterface.cpp || cmake_object_order_depends_target_obj.Vtc
+  DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = lib/Dialect/CMakeFiles/obj.Vtc.dir/OffsetInterface.cpp.o.d
+  FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG
+  INCLUDES = -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include
+  OBJECT_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
+  OBJECT_FILE_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
+
+build lib/Dialect/CMakeFiles/obj.Vtc.dir/ShiftInterface.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/ShiftInterface.cpp || cmake_object_order_depends_target_obj.Vtc
+  DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = lib/Dialect/CMakeFiles/obj.Vtc.dir/ShiftInterface.cpp.o.d
+  FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG
+  INCLUDES = -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include
+  OBJECT_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
+  OBJECT_FILE_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
+
+build lib/Dialect/CMakeFiles/obj.Vtc.dir/ExtentInterface.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/ExtentInterface.cpp || cmake_object_order_depends_target_obj.Vtc
+  DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = lib/Dialect/CMakeFiles/obj.Vtc.dir/ExtentInterface.cpp.o.d
+  FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG
+  INCLUDES = -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include
+  OBJECT_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
+  OBJECT_FILE_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
+
 
 
 #############################################
 # Object library obj.Vtc
 
-build lib/Dialect/obj.Vtc: phony lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcDialect.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcOps.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/ShapeInterface.cpp.o
+build lib/Dialect/obj.Vtc: phony lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcUtils.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcTypes.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcDialect.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcOps.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/ShapeInterface.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/OffsetInterface.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/ShiftInterface.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/ExtentInterface.cpp.o
 
 # =============================================================================
 # Object build statements for STATIC_LIBRARY target Vtc
@@ -666,7 +802,7 @@ build lib/Dialect/obj.Vtc: phony lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcDialect.c
 #############################################
 # Order-only phony target for Vtc
 
-build cmake_object_order_depends_target_Vtc: phony || cmake_object_order_depends_target_obj.Vtc include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRVtcOpsIncGen mlir-generic-headers mlir-headers
+build cmake_object_order_depends_target_Vtc: phony || cmake_object_order_depends_target_obj.Vtc include/Dialect/Vtc/MLIRExtentInterfaceIncGen include/Dialect/Vtc/MLIROffsetInterfaceIncGen include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRShiftInterfaceIncGen include/Dialect/Vtc/MLIRVtcOpsIncGen mlir-generic-headers mlir-headers
 
 
 # =============================================================================
@@ -676,7 +812,7 @@ build cmake_object_order_depends_target_Vtc: phony || cmake_object_order_depends
 #############################################
 # Link the static library lib/libVtc.a
 
-build lib/libVtc.a: CXX_STATIC_LIBRARY_LINKER__Vtc_ lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcDialect.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcOps.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/ShapeInterface.cpp.o || include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRVtcOpsIncGen lib/Dialect/obj.Vtc mlir-generic-headers mlir-headers
+build lib/libVtc.a: CXX_STATIC_LIBRARY_LINKER__Vtc_ lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcUtils.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcTypes.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcDialect.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcOps.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/ShapeInterface.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/OffsetInterface.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/ShiftInterface.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/ExtentInterface.cpp.o || include/Dialect/Vtc/MLIRExtentInterfaceIncGen include/Dialect/Vtc/MLIROffsetInterfaceIncGen include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRShiftInterfaceIncGen include/Dialect/Vtc/MLIRVtcOpsIncGen lib/Dialect/obj.Vtc mlir-generic-headers mlir-headers
   LANGUAGE_COMPILE_FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections
   OBJECT_DIR = lib/Dialect/CMakeFiles/Vtc.dir
   POST_BUILD = :
@@ -766,7 +902,7 @@ build lib/Dialect/install/strip: phony lib/Dialect/CMakeFiles/install/strip.util
 #############################################
 # Custom command for lib/Dialect/CMakeFiles/install-Vtc
 
-build lib/Dialect/CMakeFiles/install-Vtc | ${cmake_ninja_workdir}lib/Dialect/CMakeFiles/install-Vtc: CUSTOM_COMMAND || include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRVtcOpsIncGen lib/Dialect/obj.Vtc lib/libVtc.a mlir-generic-headers mlir-headers
+build lib/Dialect/CMakeFiles/install-Vtc | ${cmake_ninja_workdir}lib/Dialect/CMakeFiles/install-Vtc: CUSTOM_COMMAND || include/Dialect/Vtc/MLIRExtentInterfaceIncGen include/Dialect/Vtc/MLIROffsetInterfaceIncGen include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRShiftInterfaceIncGen include/Dialect/Vtc/MLIRVtcOpsIncGen lib/Dialect/obj.Vtc lib/libVtc.a mlir-generic-headers mlir-headers
   COMMAND = cd /home/code/mlir-tutorial/mlir-vtc/build/lib/Dialect && /usr/local/cmake-3.22.0-linux-x86_64/bin/cmake -DCMAKE_INSTALL_COMPONENT="Vtc" -P /home/code/mlir-tutorial/mlir-vtc/build/cmake_install.cmake
   pool = console
 
@@ -774,14 +910,20 @@ build lib/Dialect/CMakeFiles/install-Vtc | ${cmake_ninja_workdir}lib/Dialect/CMa
 #############################################
 # Custom command for lib/Dialect/CMakeFiles/install-Vtc-stripped
 
-build lib/Dialect/CMakeFiles/install-Vtc-stripped | ${cmake_ninja_workdir}lib/Dialect/CMakeFiles/install-Vtc-stripped: CUSTOM_COMMAND || include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRVtcOpsIncGen lib/Dialect/obj.Vtc lib/libVtc.a mlir-generic-headers mlir-headers
+build lib/Dialect/CMakeFiles/install-Vtc-stripped | ${cmake_ninja_workdir}lib/Dialect/CMakeFiles/install-Vtc-stripped: CUSTOM_COMMAND || include/Dialect/Vtc/MLIRExtentInterfaceIncGen include/Dialect/Vtc/MLIROffsetInterfaceIncGen include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRShiftInterfaceIncGen include/Dialect/Vtc/MLIRVtcOpsIncGen lib/Dialect/obj.Vtc lib/libVtc.a mlir-generic-headers mlir-headers
   COMMAND = cd /home/code/mlir-tutorial/mlir-vtc/build/lib/Dialect && /usr/local/cmake-3.22.0-linux-x86_64/bin/cmake -DCMAKE_INSTALL_COMPONENT="Vtc" -DCMAKE_INSTALL_DO_STRIP=1 -P /home/code/mlir-tutorial/mlir-vtc/build/cmake_install.cmake
   pool = console
 
 # =============================================================================
 # Target aliases.
 
+build MLIRExtentInterfaceIncGen: phony include/Dialect/Vtc/MLIRExtentInterfaceIncGen
+
+build MLIROffsetInterfaceIncGen: phony include/Dialect/Vtc/MLIROffsetInterfaceIncGen
+
 build MLIRShapeInterfaceIncGen: phony include/Dialect/Vtc/MLIRShapeInterfaceIncGen
+
+build MLIRShiftInterfaceIncGen: phony include/Dialect/Vtc/MLIRShiftInterfaceIncGen
 
 build MLIRVtcOpsIncGen: phony include/Dialect/Vtc/MLIRVtcOpsIncGen
 

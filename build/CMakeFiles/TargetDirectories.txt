@@ -25,6 +25,9 @@
 /home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/CMakeFiles/install/strip.dir
 /home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/CMakeFiles/MLIRVtcOpsIncGen.dir
 /home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/CMakeFiles/MLIRShapeInterfaceIncGen.dir
+/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/CMakeFiles/MLIROffsetInterfaceIncGen.dir
+/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/CMakeFiles/MLIRShiftInterfaceIncGen.dir
+/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/CMakeFiles/MLIRExtentInterfaceIncGen.dir
 /home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/CMakeFiles/VtcDialectDocGen.dir
 /home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/CMakeFiles/ShapeInterfaceDocGen.dir
 /home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/CMakeFiles/VtcOpsDocGen.dir
