@@ -87,6 +87,7 @@
 
     "mlir.onSettingsChanged": "prompt",
     "cmake.options.statusBarVisibility": "visible",
+    "C_Cpp.errorSquiggles": "disabled",
 
   
 }

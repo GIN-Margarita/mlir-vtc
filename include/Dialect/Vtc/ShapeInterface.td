@@ -8,7 +8,7 @@ def ShapeInterface : OpInterface<"ShapeInterface">
       let description = [{
     Interface to get the operation bounds.
   }];
-//   let cppNamespace = "::mlir::Vtc";
+//   let cppNamespace = "mlir::Vtc";
 
   let methods =[
     

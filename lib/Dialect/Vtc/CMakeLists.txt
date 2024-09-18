@@ -13,6 +13,11 @@ ExtentInterface.cpp
 DomainSplitPass.cpp
 ShapeInferencePass.cpp
 VtcInliningPass.cpp
+VtcUnrollingPass.cpp
+CombineToIfElsePass.cpp
+ShapeOverlapPass.cpp
+StorageMaterializationPass.cpp
+PeelOddIterationsPass.cpp
 
 ADDITIONAL_HEADER_DIRS
 ${PROJECT_SOURCE_DIR}/include/Dialect/Vtc  

@@ -45,6 +45,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/cmake_install.cmake")
+  include("/home/code/mlir-tutorial/mlir-vtc/build/include/Conversion/cmake_install.cmake")
 
 endif()
 
