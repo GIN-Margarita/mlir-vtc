@@ -22,7 +22,11 @@ std::unique_ptr<OperationPass<FuncOp>> createStorageMaterializationPass();
 std::unique_ptr<OperationPass<FuncOp>> createPeelOddIterationsPass();
 
 #define  GEN_PASS_REGISTRATION
-#include "Dialect/Vtc/Pass.h.inc"
+#include "Dialect/Vtc/Passes.h.inc"
+
+#define  GEN_PASS_CLASSES
+#include "Dialect/Vtc/Passes.h.inc"
+
 
 
 }

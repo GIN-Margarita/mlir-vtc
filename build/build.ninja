@@ -830,123 +830,6 @@ build lib/install/strip: phony lib/CMakeFiles/install/strip.util
 # /home/code/mlir-tutorial/mlir-vtc/lib/CMakeLists.txt
 # =============================================================================
 
-# =============================================================================
-# Object build statements for OBJECT_LIBRARY target obj.Vtc
-
-
-#############################################
-# Order-only phony target for obj.Vtc
-
-build cmake_object_order_depends_target_obj.Vtc: phony || include/Dialect/Vtc/MLIRExtentInterfaceIncGen include/Dialect/Vtc/MLIROffsetInterfaceIncGen include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRShiftInterfaceIncGen include/Dialect/Vtc/MLIRVtcOpsIncGen include/Dialect/Vtc/MLIRVtcPassIncGen mlir-generic-headers mlir-headers
-
-build lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcUtils.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/VtcUtils.cpp || cmake_object_order_depends_target_obj.Vtc
-  DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
-  DEP_FILE = lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcUtils.cpp.o.d
-  FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG
-  INCLUDES = -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include
-  OBJECT_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
-  OBJECT_FILE_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
-
-build lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcTypes.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/VtcTypes.cpp || cmake_object_order_depends_target_obj.Vtc
-  DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
-  DEP_FILE = lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcTypes.cpp.o.d
-  FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG
-  INCLUDES = -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include
-  OBJECT_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
-  OBJECT_FILE_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
-
-build lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcDialect.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/VtcDialect.cpp || cmake_object_order_depends_target_obj.Vtc
-  DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
-  DEP_FILE = lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcDialect.cpp.o.d
-  FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG
-  INCLUDES = -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include
-  OBJECT_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
-  OBJECT_FILE_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
-
-build lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcOps.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/VtcOps.cpp || cmake_object_order_depends_target_obj.Vtc
-  DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
-  DEP_FILE = lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcOps.cpp.o.d
-  FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG
-  INCLUDES = -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include
-  OBJECT_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
-  OBJECT_FILE_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
-
-build lib/Dialect/CMakeFiles/obj.Vtc.dir/ShapeInterface.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/ShapeInterface.cpp || cmake_object_order_depends_target_obj.Vtc
-  DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
-  DEP_FILE = lib/Dialect/CMakeFiles/obj.Vtc.dir/ShapeInterface.cpp.o.d
-  FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG
-  INCLUDES = -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include
-  OBJECT_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
-  OBJECT_FILE_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
-
-build lib/Dialect/CMakeFiles/obj.Vtc.dir/OffsetInterface.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/OffsetInterface.cpp || cmake_object_order_depends_target_obj.Vtc
-  DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
-  DEP_FILE = lib/Dialect/CMakeFiles/obj.Vtc.dir/OffsetInterface.cpp.o.d
-  FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG
-  INCLUDES = -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include
-  OBJECT_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
-  OBJECT_FILE_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
-
-build lib/Dialect/CMakeFiles/obj.Vtc.dir/ShiftInterface.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/ShiftInterface.cpp || cmake_object_order_depends_target_obj.Vtc
-  DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
-  DEP_FILE = lib/Dialect/CMakeFiles/obj.Vtc.dir/ShiftInterface.cpp.o.d
-  FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG
-  INCLUDES = -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include
-  OBJECT_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
-  OBJECT_FILE_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
-
-build lib/Dialect/CMakeFiles/obj.Vtc.dir/ExtentInterface.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/ExtentInterface.cpp || cmake_object_order_depends_target_obj.Vtc
-  DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
-  DEP_FILE = lib/Dialect/CMakeFiles/obj.Vtc.dir/ExtentInterface.cpp.o.d
-  FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG
-  INCLUDES = -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include
-  OBJECT_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
-  OBJECT_FILE_DIR = lib/Dialect/CMakeFiles/obj.Vtc.dir
-
-
-
-#############################################
-# Object library obj.Vtc
-
-build lib/Dialect/obj.Vtc: phony lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcUtils.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcTypes.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcDialect.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcOps.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/ShapeInterface.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/OffsetInterface.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/ShiftInterface.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/ExtentInterface.cpp.o
-
-# =============================================================================
-# Object build statements for STATIC_LIBRARY target Vtc
-
-
-#############################################
-# Order-only phony target for Vtc
-
-build cmake_object_order_depends_target_Vtc: phony || cmake_object_order_depends_target_obj.Vtc include/Dialect/Vtc/MLIRExtentInterfaceIncGen include/Dialect/Vtc/MLIROffsetInterfaceIncGen include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRShiftInterfaceIncGen include/Dialect/Vtc/MLIRVtcOpsIncGen include/Dialect/Vtc/MLIRVtcPassIncGen mlir-generic-headers mlir-headers
-
-
-# =============================================================================
-# Link build statements for STATIC_LIBRARY target Vtc
-
-
-#############################################
-# Link the static library lib/libVtc.a
-
-build lib/libVtc.a: CXX_STATIC_LIBRARY_LINKER__Vtc_ lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcUtils.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcTypes.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcDialect.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/VtcOps.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/ShapeInterface.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/OffsetInterface.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/ShiftInterface.cpp.o lib/Dialect/CMakeFiles/obj.Vtc.dir/ExtentInterface.cpp.o || include/Dialect/Vtc/MLIRExtentInterfaceIncGen include/Dialect/Vtc/MLIROffsetInterfaceIncGen include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRShiftInterfaceIncGen include/Dialect/Vtc/MLIRVtcOpsIncGen include/Dialect/Vtc/MLIRVtcPassIncGen lib/Dialect/obj.Vtc mlir-generic-headers mlir-headers
-  LANGUAGE_COMPILE_FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections
-  OBJECT_DIR = lib/Dialect/CMakeFiles/Vtc.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = lib/libVtc.a
-  TARGET_PDB = Vtc.a.dbg
-
-
-#############################################
-# Utility command for install-Vtc
-
-build lib/Dialect/install-Vtc: phony lib/Dialect/CMakeFiles/install-Vtc lib/libVtc.a
-
-
-#############################################
-# Utility command for install-Vtc-stripped
-
-build lib/Dialect/install-Vtc-stripped: phony lib/Dialect/CMakeFiles/install-Vtc-stripped lib/libVtc.a
-
 
 #############################################
 # Utility command for edit_cache
@@ -1013,20 +896,232 @@ build lib/Dialect/CMakeFiles/install/strip.util: CUSTOM_COMMAND lib/Dialect/all
 
 build lib/Dialect/install/strip: phony lib/Dialect/CMakeFiles/install/strip.util
 
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for OBJECT_LIBRARY target obj.Vtc
+
 
 #############################################
-# Custom command for lib/Dialect/CMakeFiles/install-Vtc
+# Order-only phony target for obj.Vtc
 
-build lib/Dialect/CMakeFiles/install-Vtc | ${cmake_ninja_workdir}lib/Dialect/CMakeFiles/install-Vtc: CUSTOM_COMMAND || include/Dialect/Vtc/MLIRExtentInterfaceIncGen include/Dialect/Vtc/MLIROffsetInterfaceIncGen include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRShiftInterfaceIncGen include/Dialect/Vtc/MLIRVtcOpsIncGen include/Dialect/Vtc/MLIRVtcPassIncGen lib/Dialect/obj.Vtc lib/libVtc.a mlir-generic-headers mlir-headers
-  COMMAND = cd /home/code/mlir-tutorial/mlir-vtc/build/lib/Dialect && /usr/local/cmake-3.22.0-linux-x86_64/bin/cmake -DCMAKE_INSTALL_COMPONENT="Vtc" -P /home/code/mlir-tutorial/mlir-vtc/build/cmake_install.cmake
+build cmake_object_order_depends_target_obj.Vtc: phony || include/Dialect/Vtc/MLIRExtentInterfaceIncGen include/Dialect/Vtc/MLIROffsetInterfaceIncGen include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRShiftInterfaceIncGen include/Dialect/Vtc/MLIRVtcOpsIncGen include/Dialect/Vtc/MLIRVtcPassIncGen mlir-generic-headers mlir-headers
+
+build lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/VtcUtils.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/Vtc/VtcUtils.cpp || cmake_object_order_depends_target_obj.Vtc
+  DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/VtcUtils.cpp.o.d
+  FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG
+  INCLUDES = -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include
+  OBJECT_DIR = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir
+  OBJECT_FILE_DIR = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir
+
+build lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/VtcTypes.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/Vtc/VtcTypes.cpp || cmake_object_order_depends_target_obj.Vtc
+  DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/VtcTypes.cpp.o.d
+  FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG
+  INCLUDES = -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include
+  OBJECT_DIR = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir
+  OBJECT_FILE_DIR = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir
+
+build lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/VtcDialect.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/Vtc/VtcDialect.cpp || cmake_object_order_depends_target_obj.Vtc
+  DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/VtcDialect.cpp.o.d
+  FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG
+  INCLUDES = -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include
+  OBJECT_DIR = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir
+  OBJECT_FILE_DIR = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir
+
+build lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/VtcOps.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/Vtc/VtcOps.cpp || cmake_object_order_depends_target_obj.Vtc
+  DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/VtcOps.cpp.o.d
+  FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG
+  INCLUDES = -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include
+  OBJECT_DIR = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir
+  OBJECT_FILE_DIR = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir
+
+build lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/ShapeInterface.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/Vtc/ShapeInterface.cpp || cmake_object_order_depends_target_obj.Vtc
+  DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/ShapeInterface.cpp.o.d
+  FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG
+  INCLUDES = -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include
+  OBJECT_DIR = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir
+  OBJECT_FILE_DIR = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir
+
+build lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/OffsetInterface.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/Vtc/OffsetInterface.cpp || cmake_object_order_depends_target_obj.Vtc
+  DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/OffsetInterface.cpp.o.d
+  FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG
+  INCLUDES = -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include
+  OBJECT_DIR = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir
+  OBJECT_FILE_DIR = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir
+
+build lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/ShiftInterface.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/Vtc/ShiftInterface.cpp || cmake_object_order_depends_target_obj.Vtc
+  DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/ShiftInterface.cpp.o.d
+  FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG
+  INCLUDES = -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include
+  OBJECT_DIR = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir
+  OBJECT_FILE_DIR = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir
+
+build lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/ExtentInterface.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/Vtc/ExtentInterface.cpp || cmake_object_order_depends_target_obj.Vtc
+  DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/ExtentInterface.cpp.o.d
+  FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG
+  INCLUDES = -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include
+  OBJECT_DIR = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir
+  OBJECT_FILE_DIR = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir
+
+build lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/DomainSplitPass.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/Vtc/DomainSplitPass.cpp || cmake_object_order_depends_target_obj.Vtc
+  DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/DomainSplitPass.cpp.o.d
+  FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG
+  INCLUDES = -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include
+  OBJECT_DIR = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir
+  OBJECT_FILE_DIR = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir
+
+build lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/ShapeInferencePass.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/Vtc/ShapeInferencePass.cpp || cmake_object_order_depends_target_obj.Vtc
+  DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/ShapeInferencePass.cpp.o.d
+  FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG
+  INCLUDES = -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include
+  OBJECT_DIR = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir
+  OBJECT_FILE_DIR = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir
+
+build lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/VtcInliningPass.cpp.o: CXX_COMPILER__obj.2eVtc_ /home/code/mlir-tutorial/mlir-vtc/lib/Dialect/Vtc/VtcInliningPass.cpp || cmake_object_order_depends_target_obj.Vtc
+  DEFINES = -DCUDA_BACKEND_ENABLED -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/VtcInliningPass.cpp.o.d
+  FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections   -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-rtti -UNDEBUG
+  INCLUDES = -I/home/code/mlir-tutorial/install/include -I/home/code/mlir-tutorial/mlir-vtc/include -I/home/code/mlir-tutorial/mlir-vtc/build/include
+  OBJECT_DIR = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir
+  OBJECT_FILE_DIR = lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir
+
+
+
+#############################################
+# Object library obj.Vtc
+
+build lib/Dialect/Vtc/obj.Vtc: phony lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/VtcUtils.cpp.o lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/VtcTypes.cpp.o lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/VtcDialect.cpp.o lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/VtcOps.cpp.o lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/ShapeInterface.cpp.o lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/OffsetInterface.cpp.o lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/ShiftInterface.cpp.o lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/ExtentInterface.cpp.o lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/DomainSplitPass.cpp.o lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/ShapeInferencePass.cpp.o lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/VtcInliningPass.cpp.o
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target Vtc
+
+
+#############################################
+# Order-only phony target for Vtc
+
+build cmake_object_order_depends_target_Vtc: phony || cmake_object_order_depends_target_obj.Vtc include/Dialect/Vtc/MLIRExtentInterfaceIncGen include/Dialect/Vtc/MLIROffsetInterfaceIncGen include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRShiftInterfaceIncGen include/Dialect/Vtc/MLIRVtcOpsIncGen include/Dialect/Vtc/MLIRVtcPassIncGen mlir-generic-headers mlir-headers
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target Vtc
+
+
+#############################################
+# Link the static library lib/libVtc.a
+
+build lib/libVtc.a: CXX_STATIC_LIBRARY_LINKER__Vtc_ lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/VtcUtils.cpp.o lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/VtcTypes.cpp.o lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/VtcDialect.cpp.o lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/VtcOps.cpp.o lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/ShapeInterface.cpp.o lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/OffsetInterface.cpp.o lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/ShiftInterface.cpp.o lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/ExtentInterface.cpp.o lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/DomainSplitPass.cpp.o lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/ShapeInferencePass.cpp.o lib/Dialect/Vtc/CMakeFiles/obj.Vtc.dir/VtcInliningPass.cpp.o || include/Dialect/Vtc/MLIRExtentInterfaceIncGen include/Dialect/Vtc/MLIROffsetInterfaceIncGen include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRShiftInterfaceIncGen include/Dialect/Vtc/MLIRVtcOpsIncGen include/Dialect/Vtc/MLIRVtcPassIncGen lib/Dialect/Vtc/obj.Vtc mlir-generic-headers mlir-headers
+  LANGUAGE_COMPILE_FLAGS = -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections
+  OBJECT_DIR = lib/Dialect/Vtc/CMakeFiles/Vtc.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lib/libVtc.a
+  TARGET_PDB = Vtc.a.dbg
+
+
+#############################################
+# Utility command for install-Vtc
+
+build lib/Dialect/Vtc/install-Vtc: phony lib/Dialect/Vtc/CMakeFiles/install-Vtc lib/libVtc.a
+
+
+#############################################
+# Utility command for install-Vtc-stripped
+
+build lib/Dialect/Vtc/install-Vtc-stripped: phony lib/Dialect/Vtc/CMakeFiles/install-Vtc-stripped lib/libVtc.a
+
+
+#############################################
+# Utility command for edit_cache
+
+build lib/Dialect/Vtc/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/code/mlir-tutorial/mlir-vtc/build/lib/Dialect/Vtc && /usr/local/cmake-3.22.0-linux-x86_64/bin/ccmake -S/home/code/mlir-tutorial/mlir-vtc -B/home/code/mlir-tutorial/mlir-vtc/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build lib/Dialect/Vtc/edit_cache: phony lib/Dialect/Vtc/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build lib/Dialect/Vtc/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/code/mlir-tutorial/mlir-vtc/build/lib/Dialect/Vtc && /usr/local/cmake-3.22.0-linux-x86_64/bin/cmake --regenerate-during-build -S/home/code/mlir-tutorial/mlir-vtc -B/home/code/mlir-tutorial/mlir-vtc/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build lib/Dialect/Vtc/rebuild_cache: phony lib/Dialect/Vtc/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build lib/Dialect/Vtc/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build lib/Dialect/Vtc/CMakeFiles/install.util: CUSTOM_COMMAND lib/Dialect/Vtc/all
+  COMMAND = cd /home/code/mlir-tutorial/mlir-vtc/build/lib/Dialect/Vtc && /usr/local/cmake-3.22.0-linux-x86_64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build lib/Dialect/Vtc/install: phony lib/Dialect/Vtc/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build lib/Dialect/Vtc/CMakeFiles/install/local.util: CUSTOM_COMMAND lib/Dialect/Vtc/all
+  COMMAND = cd /home/code/mlir-tutorial/mlir-vtc/build/lib/Dialect/Vtc && /usr/local/cmake-3.22.0-linux-x86_64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build lib/Dialect/Vtc/install/local: phony lib/Dialect/Vtc/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build lib/Dialect/Vtc/CMakeFiles/install/strip.util: CUSTOM_COMMAND lib/Dialect/Vtc/all
+  COMMAND = cd /home/code/mlir-tutorial/mlir-vtc/build/lib/Dialect/Vtc && /usr/local/cmake-3.22.0-linux-x86_64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build lib/Dialect/Vtc/install/strip: phony lib/Dialect/Vtc/CMakeFiles/install/strip.util
+
+
+#############################################
+# Custom command for lib/Dialect/Vtc/CMakeFiles/install-Vtc
+
+build lib/Dialect/Vtc/CMakeFiles/install-Vtc | ${cmake_ninja_workdir}lib/Dialect/Vtc/CMakeFiles/install-Vtc: CUSTOM_COMMAND || include/Dialect/Vtc/MLIRExtentInterfaceIncGen include/Dialect/Vtc/MLIROffsetInterfaceIncGen include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRShiftInterfaceIncGen include/Dialect/Vtc/MLIRVtcOpsIncGen include/Dialect/Vtc/MLIRVtcPassIncGen lib/Dialect/Vtc/obj.Vtc lib/libVtc.a mlir-generic-headers mlir-headers
+  COMMAND = cd /home/code/mlir-tutorial/mlir-vtc/build/lib/Dialect/Vtc && /usr/local/cmake-3.22.0-linux-x86_64/bin/cmake -DCMAKE_INSTALL_COMPONENT="Vtc" -P /home/code/mlir-tutorial/mlir-vtc/build/cmake_install.cmake
   pool = console
 
 
 #############################################
-# Custom command for lib/Dialect/CMakeFiles/install-Vtc-stripped
+# Custom command for lib/Dialect/Vtc/CMakeFiles/install-Vtc-stripped
 
-build lib/Dialect/CMakeFiles/install-Vtc-stripped | ${cmake_ninja_workdir}lib/Dialect/CMakeFiles/install-Vtc-stripped: CUSTOM_COMMAND || include/Dialect/Vtc/MLIRExtentInterfaceIncGen include/Dialect/Vtc/MLIROffsetInterfaceIncGen include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRShiftInterfaceIncGen include/Dialect/Vtc/MLIRVtcOpsIncGen include/Dialect/Vtc/MLIRVtcPassIncGen lib/Dialect/obj.Vtc lib/libVtc.a mlir-generic-headers mlir-headers
-  COMMAND = cd /home/code/mlir-tutorial/mlir-vtc/build/lib/Dialect && /usr/local/cmake-3.22.0-linux-x86_64/bin/cmake -DCMAKE_INSTALL_COMPONENT="Vtc" -DCMAKE_INSTALL_DO_STRIP=1 -P /home/code/mlir-tutorial/mlir-vtc/build/cmake_install.cmake
+build lib/Dialect/Vtc/CMakeFiles/install-Vtc-stripped | ${cmake_ninja_workdir}lib/Dialect/Vtc/CMakeFiles/install-Vtc-stripped: CUSTOM_COMMAND || include/Dialect/Vtc/MLIRExtentInterfaceIncGen include/Dialect/Vtc/MLIROffsetInterfaceIncGen include/Dialect/Vtc/MLIRShapeInterfaceIncGen include/Dialect/Vtc/MLIRShiftInterfaceIncGen include/Dialect/Vtc/MLIRVtcOpsIncGen include/Dialect/Vtc/MLIRVtcPassIncGen lib/Dialect/Vtc/obj.Vtc lib/libVtc.a mlir-generic-headers mlir-headers
+  COMMAND = cd /home/code/mlir-tutorial/mlir-vtc/build/lib/Dialect/Vtc && /usr/local/cmake-3.22.0-linux-x86_64/bin/cmake -DCMAKE_INSTALL_COMPONENT="Vtc" -DCMAKE_INSTALL_DO_STRIP=1 -P /home/code/mlir-tutorial/mlir-vtc/build/cmake_install.cmake
   pool = console
 
 # =============================================================================
@@ -1058,13 +1153,13 @@ build VtcDialectDocGen: phony include/Dialect/Vtc/VtcDialectDocGen
 
 build VtcOpsDocGen: phony include/Dialect/Vtc/VtcOpsDocGen
 
-build install-Vtc: phony lib/Dialect/install-Vtc
+build install-Vtc: phony lib/Dialect/Vtc/install-Vtc
 
-build install-Vtc-stripped: phony lib/Dialect/install-Vtc-stripped
+build install-Vtc-stripped: phony lib/Dialect/Vtc/install-Vtc-stripped
 
 build libVtc.a: phony lib/libVtc.a
 
-build obj.Vtc: phony lib/Dialect/obj.Vtc
+build obj.Vtc: phony lib/Dialect/Vtc/obj.Vtc
 
 # =============================================================================
 # Folder targets.
@@ -1109,7 +1204,14 @@ build lib/all: phony lib/Dialect/all
 #############################################
 # Folder: /home/code/mlir-tutorial/mlir-vtc/build/lib/Dialect
 
-build lib/Dialect/all: phony lib/libVtc.a
+build lib/Dialect/all: phony lib/Dialect/Vtc/all
+
+# =============================================================================
+
+#############################################
+# Folder: /home/code/mlir-tutorial/mlir-vtc/build/lib/Dialect/Vtc
+
+build lib/Dialect/Vtc/all: phony lib/libVtc.a
 
 # =============================================================================
 # Built-in targets
@@ -1118,14 +1220,14 @@ build lib/Dialect/all: phony lib/libVtc.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../cmake/modules/sanitizers.cmake ../include/CMakeLists.txt ../include/Dialect/CMakeLists.txt ../include/Dialect/Vtc/CMakeLists.txt ../lib/CMakeLists.txt ../lib/Dialect/CMakeLists.txt /home/code/mlir-tutorial/install/lib/cmake/llvm/AddLLVM.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/CheckCompilerVersion.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/CheckLinkerFlag.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/DetermineGCCCompatible.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/HandleLLVMOptions.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/HandleLLVMStdlib.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/LLVM-Config.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/LLVMConfig.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/LLVMConfigVersion.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/LLVMExports-release.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/LLVMExports.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/LLVMProcessSources.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/TableGen.cmake /home/code/mlir-tutorial/install/lib/cmake/mlir/AddMLIR.cmake /home/code/mlir-tutorial/install/lib/cmake/mlir/MLIRConfig.cmake /home/code/mlir-tutorial/install/lib/cmake/mlir/MLIRConfigVersion.cmake /home/code/mlir-tutorial/install/lib/cmake/mlir/MLIRTargets-release.cmake /home/code/mlir-tutorial/install/lib/cmake/mlir/MLIRTargets.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/AddFileDependencies.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeCUDAInformation.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeDependentOption.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeParseArguments.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CheckCCompilerFlag.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CheckCSourceCompiles.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CheckCXXCompilerFlag.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CheckCXXSourceCompiles.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CheckLanguage.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CheckSymbolExists.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Compiler/NVIDIA-CUDA.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/FindLibXml2.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/FindPkgConfig.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/FindZLIB.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Internal/CheckCompilerFlag.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Platform/UnixPaths.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/SelectLibraryConfigurations.cmake CMakeCache.txt CMakeFiles/3.22.0/CMakeCCompiler.cmake CMakeFiles/3.22.0/CMakeCUDACompiler.cmake CMakeFiles/3.22.0/CMakeCXXCompiler.cmake CMakeFiles/3.22.0/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../cmake/modules/sanitizers.cmake ../include/CMakeLists.txt ../include/Dialect/CMakeLists.txt ../include/Dialect/Vtc/CMakeLists.txt ../lib/CMakeLists.txt ../lib/Dialect/CMakeLists.txt ../lib/Dialect/Vtc/CMakeLists.txt /home/code/mlir-tutorial/install/lib/cmake/llvm/AddLLVM.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/CheckCompilerVersion.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/CheckLinkerFlag.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/DetermineGCCCompatible.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/HandleLLVMOptions.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/HandleLLVMStdlib.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/LLVM-Config.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/LLVMConfig.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/LLVMConfigVersion.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/LLVMExports-release.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/LLVMExports.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/LLVMProcessSources.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/TableGen.cmake /home/code/mlir-tutorial/install/lib/cmake/mlir/AddMLIR.cmake /home/code/mlir-tutorial/install/lib/cmake/mlir/MLIRConfig.cmake /home/code/mlir-tutorial/install/lib/cmake/mlir/MLIRConfigVersion.cmake /home/code/mlir-tutorial/install/lib/cmake/mlir/MLIRTargets-release.cmake /home/code/mlir-tutorial/install/lib/cmake/mlir/MLIRTargets.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/AddFileDependencies.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeCUDAInformation.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeDependentOption.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeParseArguments.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CheckCCompilerFlag.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CheckCSourceCompiles.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CheckCXXCompilerFlag.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CheckCXXSourceCompiles.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CheckLanguage.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CheckSymbolExists.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Compiler/NVIDIA-CUDA.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/FindLibXml2.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/FindPkgConfig.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/FindZLIB.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Internal/CheckCompilerFlag.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Platform/UnixPaths.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/SelectLibraryConfigurations.cmake CMakeCache.txt CMakeFiles/3.22.0/CMakeCCompiler.cmake CMakeFiles/3.22.0/CMakeCUDACompiler.cmake CMakeFiles/3.22.0/CMakeCXXCompiler.cmake CMakeFiles/3.22.0/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../cmake/modules/sanitizers.cmake ../include/CMakeLists.txt ../include/Dialect/CMakeLists.txt ../include/Dialect/Vtc/CMakeLists.txt ../lib/CMakeLists.txt ../lib/Dialect/CMakeLists.txt /home/code/mlir-tutorial/install/lib/cmake/llvm/AddLLVM.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/CheckCompilerVersion.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/CheckLinkerFlag.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/DetermineGCCCompatible.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/HandleLLVMOptions.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/HandleLLVMStdlib.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/LLVM-Config.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/LLVMConfig.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/LLVMConfigVersion.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/LLVMExports-release.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/LLVMExports.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/LLVMProcessSources.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/TableGen.cmake /home/code/mlir-tutorial/install/lib/cmake/mlir/AddMLIR.cmake /home/code/mlir-tutorial/install/lib/cmake/mlir/MLIRConfig.cmake /home/code/mlir-tutorial/install/lib/cmake/mlir/MLIRConfigVersion.cmake /home/code/mlir-tutorial/install/lib/cmake/mlir/MLIRTargets-release.cmake /home/code/mlir-tutorial/install/lib/cmake/mlir/MLIRTargets.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/AddFileDependencies.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeCUDAInformation.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeDependentOption.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeParseArguments.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CheckCCompilerFlag.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CheckCSourceCompiles.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CheckCXXCompilerFlag.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CheckCXXSourceCompiles.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CheckLanguage.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CheckSymbolExists.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Compiler/NVIDIA-CUDA.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/FindLibXml2.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/FindPkgConfig.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/FindZLIB.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Internal/CheckCompilerFlag.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Platform/UnixPaths.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/SelectLibraryConfigurations.cmake CMakeCache.txt CMakeFiles/3.22.0/CMakeCCompiler.cmake CMakeFiles/3.22.0/CMakeCUDACompiler.cmake CMakeFiles/3.22.0/CMakeCXXCompiler.cmake CMakeFiles/3.22.0/CMakeSystem.cmake: phony
+build ../CMakeLists.txt ../cmake/modules/sanitizers.cmake ../include/CMakeLists.txt ../include/Dialect/CMakeLists.txt ../include/Dialect/Vtc/CMakeLists.txt ../lib/CMakeLists.txt ../lib/Dialect/CMakeLists.txt ../lib/Dialect/Vtc/CMakeLists.txt /home/code/mlir-tutorial/install/lib/cmake/llvm/AddLLVM.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/CheckCompilerVersion.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/CheckLinkerFlag.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/DetermineGCCCompatible.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/HandleLLVMOptions.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/HandleLLVMStdlib.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/LLVM-Config.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/LLVMConfig.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/LLVMConfigVersion.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/LLVMExports-release.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/LLVMExports.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/LLVMProcessSources.cmake /home/code/mlir-tutorial/install/lib/cmake/llvm/TableGen.cmake /home/code/mlir-tutorial/install/lib/cmake/mlir/AddMLIR.cmake /home/code/mlir-tutorial/install/lib/cmake/mlir/MLIRConfig.cmake /home/code/mlir-tutorial/install/lib/cmake/mlir/MLIRConfigVersion.cmake /home/code/mlir-tutorial/install/lib/cmake/mlir/MLIRTargets-release.cmake /home/code/mlir-tutorial/install/lib/cmake/mlir/MLIRTargets.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/AddFileDependencies.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeCUDAInformation.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeDependentOption.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeParseArguments.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CheckCCompilerFlag.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CheckCSourceCompiles.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CheckCXXCompilerFlag.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CheckCXXSourceCompiles.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CheckLanguage.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/CheckSymbolExists.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Compiler/NVIDIA-CUDA.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/FindLibXml2.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/FindPkgConfig.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/FindZLIB.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Internal/CheckCompilerFlag.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/Platform/UnixPaths.cmake /usr/local/cmake-3.22.0-linux-x86_64/share/cmake-3.22/Modules/SelectLibraryConfigurations.cmake CMakeCache.txt CMakeFiles/3.22.0/CMakeCCompiler.cmake CMakeFiles/3.22.0/CMakeCUDACompiler.cmake CMakeFiles/3.22.0/CMakeCXXCompiler.cmake CMakeFiles/3.22.0/CMakeSystem.cmake: phony
 
 
 #############################################

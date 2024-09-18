@@ -12,7 +12,7 @@ struct ShapeInterfaceInterfaceTraits {
   struct Concept {
     mlir::Vtc::Index (*getLB)(::mlir::Operation *);
     mlir::Vtc::Index (*getUB)(::mlir::Operation *);
-    void (*cleanInferredShape)(::mlir::Operation *);
+    void (*clearInferredShape)(::mlir::Operation *);
     void (*updateShape)(::mlir::Operation *, mlir::ArrayRef<int64_t>, mlir::ArrayRef<int64_t>);
     bool (*hasShape)(::mlir::Operation *);
     unsigned (*getRank)(::mlir::Operation *);
@@ -21,11 +21,11 @@ struct ShapeInterfaceInterfaceTraits {
   template<typename ConcreteOp>
   class Model : public Concept {
   public:
-    Model() : Concept{getLB, getUB, cleanInferredShape, updateShape, hasShape, getRank, updateArgumentTypes} {}
+    Model() : Concept{getLB, getUB, clearInferredShape, updateShape, hasShape, getRank, updateArgumentTypes} {}
 
     static inline mlir::Vtc::Index getLB(::mlir::Operation *tablegen_opaque_val);
     static inline mlir::Vtc::Index getUB(::mlir::Operation *tablegen_opaque_val);
-    static inline void cleanInferredShape(::mlir::Operation *tablegen_opaque_val);
+    static inline void clearInferredShape(::mlir::Operation *tablegen_opaque_val);
     static inline void updateShape(::mlir::Operation *tablegen_opaque_val, mlir::ArrayRef<int64_t> lb, mlir::ArrayRef<int64_t> ub);
     static inline bool hasShape(::mlir::Operation *tablegen_opaque_val);
     static inline unsigned getRank(::mlir::Operation *tablegen_opaque_val);
@@ -43,7 +43,7 @@ public:
   struct Trait : public ShapeInterfaceTrait<ConcreteOp> {};
   mlir::Vtc::Index getLB();
   mlir::Vtc::Index getUB();
-  void cleanInferredShape();
+  void clearInferredShape();
   void updateShape(mlir::ArrayRef<int64_t> lb, mlir::ArrayRef<int64_t> ub);
   bool hasShape();
   unsigned getRank();
@@ -66,7 +66,7 @@ mlir::Vtc::Index detail::ShapeInterfaceInterfaceTraits::Model<ConcreteOp>::getUB
             return result;
 }
 template<typename ConcreteOp>
-void detail::ShapeInterfaceInterfaceTraits::Model<ConcreteOp>::cleanInferredShape(::mlir::Operation *tablegen_opaque_val) {
+void detail::ShapeInterfaceInterfaceTraits::Model<ConcreteOp>::clearInferredShape(::mlir::Operation *tablegen_opaque_val) {
   if(isOptionalArrayAttr((llvm::cast<ConcreteOp>(tablegen_opaque_val)).lb()) && isOptionalArrayAttr((llvm::cast<ConcreteOp>(tablegen_opaque_val)).ub())){
                 (llvm::cast<ConcreteOp>(tablegen_opaque_val)).removeAttr("(llvm::cast<ConcreteOp>(tablegen_opaque_val)).getLBAttrName()");
                 (llvm::cast<ConcreteOp>(tablegen_opaque_val)).removeAttr("(llvm::cast<ConcreteOp>(tablegen_opaque_val)).getUBAttrName()");

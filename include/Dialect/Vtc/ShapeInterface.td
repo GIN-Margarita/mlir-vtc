@@ -38,7 +38,7 @@ def ShapeInterface : OpInterface<"ShapeInterface">
     >,
     InterfaceMethod<"clear the optional range atrributes",
         "void",
-        "cleanInferredShape",
+        "clearInferredShape",
         (ins),
         [{
             if(isOptionalArrayAttr($_op.lb()) && isOptionalArrayAttr($_op.ub())){

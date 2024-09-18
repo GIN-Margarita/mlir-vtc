@@ -12,8 +12,8 @@ mlir::Vtc::Index ShapeInterface::getLB() {
 mlir::Vtc::Index ShapeInterface::getUB() {
       return getImpl()->getUB(getOperation());
   }
-void ShapeInterface::cleanInferredShape() {
-      return getImpl()->cleanInferredShape(getOperation());
+void ShapeInterface::clearInferredShape() {
+      return getImpl()->clearInferredShape(getOperation());
   }
 void ShapeInterface::updateShape(mlir::ArrayRef<int64_t> lb, mlir::ArrayRef<int64_t> ub) {
       return getImpl()->updateShape(getOperation(), lb, ub);
