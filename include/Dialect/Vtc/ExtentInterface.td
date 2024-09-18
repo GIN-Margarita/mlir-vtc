@@ -20,14 +20,12 @@ def ExtentInterface : OpInterface<"ExtentInterface">
             "std::tuple<mlir::Vtc::Index,mlir::Vtc::Index>",
             "getAccessExtent",
             (ins),
+            [{}],
             [{
-            }],
-            [{
-            using namespace mlir;
                 mlir::Vtc::Index result;
-                ArrayAttr offset = $_op.offset();
+                mlir::ArrayAttr offset = $_op.offset();
                 for (auto &elem : offset.getValue())
-                result.push_back(elem.cast<IntegerAttr>().getValue().getSExtValue());
+                result.push_back(elem.cast<mlir::IntegerAttr>().getValue().getSExtValue());
                 return std::make_tuple(result, result);
             }]
         >

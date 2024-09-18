@@ -12,7 +12,7 @@ ADDITIONAL_HEADER_DIRS
 ${PROJECT_SOURCE_DIR}/include/Dialect/Vtc  
 DEPENDS
 MLIRVtcOpsIncGen
-# MLIRVtcPassIncGen
+MLIRVtcPassIncGen
 MLIRShapeInterfaceIncGen
 MLIROffsetInterfaceIncGen
 MLIRShiftInterfaceIncGen

@@ -26,7 +26,15 @@ mlir_tablegen(ExtentInterface.cpp.inc -gen-op-interface-defs)
 add_public_tablegen_target(MLIRExtentInterfaceIncGen)
 add_dependencies(mlir-headers MLIRExtentInterfaceIncGen)
 
+set(LLVM_TARGET_DEFINITIONS Passes.td)
+mlir_tablegen(Passes.h.inc -gen-pass-decls -name Vtc)
+add_public_tablegen_target(MLIRVtcPassIncGen)
+add_dependencies(mlir-headers MLIRVtcPassIncGen)
+
 
 add_mlir_doc(VtcDialect -gen-dialect-doc VtcDialect Vtc/)
 add_mlir_doc(ShapeInterface -gen-op-interface-doc ShapeInterface Vtc/)
+add_mlir_doc(OffsetInterface -gen-op-interface-doc OffsetInterface Vtc/)
+add_mlir_doc(ShiftInterface -gen-op-interface-doc ShiftInterface Vtc/)
+add_mlir_doc(ExtentInterface -gen-op-interface-doc ExtentInterface Vtc/)
 add_mlir_doc(VtcOps -gen-op-doc VtcOps Vtc/)

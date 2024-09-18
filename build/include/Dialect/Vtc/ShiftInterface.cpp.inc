@@ -6,6 +6,6 @@
 |*                                                                            *|
 \*===----------------------------------------------------------------------===*/
 
-void ShiftInterface::ShiftByOffset(mlir::ArrayRef<int64_t> offset) {
-      return getImpl()->ShiftByOffset(getOperation(), offset);
+void ShiftInterface::shiftByOffset(mlir::ArrayRef<int64_t> offset) {
+      return getImpl()->shiftByOffset(getOperation(), offset);
   }

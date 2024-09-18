@@ -11,6 +11,7 @@ def ShapeInterface : OpInterface<"ShapeInterface">
 //   let cppNamespace = "::mlir::Vtc";
 
   let methods =[
+    
     InterfaceMethod<"getBounds",
     "mlir::Vtc::Index",
     "getLB",

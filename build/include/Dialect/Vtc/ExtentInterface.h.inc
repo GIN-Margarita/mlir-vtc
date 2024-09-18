@@ -29,11 +29,10 @@ public:
   template <typename ConcreteOp>
   struct ExtentInterfaceTrait : public ::mlir::OpInterface<ExtentInterface, detail::ExtentInterfaceInterfaceTraits>::Trait<ConcreteOp> {
     std::tuple<mlir::Vtc::Index,mlir::Vtc::Index> getAccessExtent() {
-      using namespace mlir;
-                mlir::Vtc::Index result;
-                ArrayAttr offset = (*static_cast<ConcreteOp *>(this)).offset();
+      mlir::Vtc::Index result;
+                mlir::ArrayAttr offset = (*static_cast<ConcreteOp *>(this)).offset();
                 for (auto &elem : offset.getValue())
-                result.push_back(elem.cast<IntegerAttr>().getValue().getSExtValue());
+                result.push_back(elem.cast<mlir::IntegerAttr>().getValue().getSExtValue());
                 return std::make_tuple(result, result);
     }
   };
@@ -48,5 +47,5 @@ mlir::Value detail::ExtentInterfaceInterfaceTraits::Model<ConcreteOp>::getTemp(:
 }
 template<typename ConcreteOp>
 std::tuple<mlir::Vtc::Index,mlir::Vtc::Index> detail::ExtentInterfaceInterfaceTraits::Model<ConcreteOp>::getAccessExtent(::mlir::Operation *tablegen_opaque_val) {
-  
+  return (llvm::cast<ConcreteOp>(tablegen_opaque_val)).getAccessExtent();
 }

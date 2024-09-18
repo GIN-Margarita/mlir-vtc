@@ -28,8 +28,12 @@
 /home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/CMakeFiles/MLIROffsetInterfaceIncGen.dir
 /home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/CMakeFiles/MLIRShiftInterfaceIncGen.dir
 /home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/CMakeFiles/MLIRExtentInterfaceIncGen.dir
+/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/CMakeFiles/MLIRVtcPassIncGen.dir
 /home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/CMakeFiles/VtcDialectDocGen.dir
 /home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/CMakeFiles/ShapeInterfaceDocGen.dir
+/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/CMakeFiles/OffsetInterfaceDocGen.dir
+/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/CMakeFiles/ShiftInterfaceDocGen.dir
+/home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/CMakeFiles/ExtentInterfaceDocGen.dir
 /home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/CMakeFiles/VtcOpsDocGen.dir
 /home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/CMakeFiles/edit_cache.dir
 /home/code/mlir-tutorial/mlir-vtc/build/include/Dialect/Vtc/CMakeFiles/rebuild_cache.dir

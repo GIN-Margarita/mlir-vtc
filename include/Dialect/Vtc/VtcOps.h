@@ -16,6 +16,9 @@
 namespace mlir {
 namespace Vtc {
 #include "Dialect/Vtc/ShapeInterface.h.inc"
+#include "Dialect/Vtc/OffsetInterface.h.inc"
+#include "Dialect/Vtc/ShiftInterface.h.inc"
+#include "Dialect/Vtc/ExtentInterface.h.inc"
 } // namespace Vtc
 } // namespace mlir
 
@@ -24,9 +27,25 @@ namespace Vtc {
 #include "Dialect/Vtc/VtcOps.h.inc"
 
 namespace mlir {
-namespace vtc {
+namespace Vtc {
 
+    // Base class for the Vtc apply op canonicalization
+struct ApplyOpPattern : public OpRewritePattern<Vtc::ApplyOp> {
+  ApplyOpPattern(MLIRContext *context, PatternBenefit benefit = 1);
 
+  Vtc::ApplyOp cleanupOpArguments(Vtc::ApplyOp applyOp,
+                                      PatternRewriter &rewriter) const;
+};
+
+// Base class for the Vtc combine op canonicalization
+struct CombineOpPattern : public OpRewritePattern<Vtc::CombineOp> {
+  CombineOpPattern(MLIRContext *context, PatternBenefit benefit = 1);
+
+  Vtc::ApplyOp createEmptyApply(Vtc::CombineOp combineOp,
+                                    int64_t lowerLimit, int64_t upperLimit,
+                                    ValueRange values,
+                                    PatternRewriter &rewriter) const;
+};
 } // namespace Vtc
 } // namespace mlir
 

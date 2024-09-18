@@ -10,8 +10,8 @@ def ShiftInterface : OpInterface<"ShiftInterface">
         InterfaceMethod<
             "Shift the operation by a constant offset",
             "void",
-            "ShiftByOffset",
-            (ins "mlir::ArrayRef<int64_t>":$offset),
+            "shiftByOffset",
+            (ins "mlir::ArrayRef<int64_t>":$offset),[{}],
             [{
                 mlir::SmallVector<mlir::Attribute,mlir::Vtc::kIndexSize> offsetAttr;
                 for( auto elem : llvm::zip(offset,$_op.offset()))
